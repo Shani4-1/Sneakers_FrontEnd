@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Sneaker-Container {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.Sneaker-Img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.Sneaker-Details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Sneaker-Name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Sneaker-Brand {
+  margin-bottom: 5px;
+}
+
+.Sneaker-IsFavorite {
+  margin-bottom: 5px;
+}
+
+.Sneaker-ReleaseDate {
+  margin-bottom: 5px;
+}
+
+.Sneaker-Price {
+  margin-bottom: 5px;
+}
+
