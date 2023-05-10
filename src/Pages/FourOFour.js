@@ -1,5 +1,7 @@
-const FourOFour = () => {
-    return 'Four O Four Here!';
-};
-
-export default FourOFour;
+export default function FourOFour() {
+    return (
+        <div>
+            <h1>Sorry, no page found</h1>
+        </div>
+    );
+}
