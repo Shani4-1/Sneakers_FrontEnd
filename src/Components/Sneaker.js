@@ -4,15 +4,15 @@ const Sneaker = ({ sneaker }) => {
   return (
     <div className="Sneaker-Container">
       <li>
-        <img className="Sneaker-Img" src="" alt={sneaker.name}></img>
+        <img className="Sneaker-Img" src={sneaker.image_url} alt={sneaker.name}></img>
         <div className="Sneaker-Details">
-          {/* <Link to={`/sneakers/${sneaker.id}`}> */}
+          <Link to={`/sneakers/${sneaker.id}`}>
           <h3>{sneaker.name}</h3>
-          {/* </Link> */}
-
+          </Link>
+{/* 
           <p>Brand: {sneaker.brand}</p>
           <p>Original Release Date: {sneaker.release_date}</p>
-          <p>Original Price: {sneaker.price}</p>
+          <p>Original Price: {sneaker.price}</p> */}
           <p>
             Is Favorite?{" "}
             {sneaker.is_favorite ? (
