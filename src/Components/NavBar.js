@@ -4,13 +4,13 @@ const Navbar = () => {
   return (
     <nav>
       <h1>
-        <Link>👟Sneaker App👟</Link>
+        <Link to={`/`}>👟Sneaker App👟</Link>
       </h1>
       <button>
-        <Link>All Sneakers</Link>
+        <Link to={`/sneakers`}>All Sneakers</Link>
       </button>
       <button>
-        <Link>Add New Sneaker</Link>
+        <Link to={`/sneakers/new`}>Add New Sneaker</Link>
       </button>
     </nav>
   );
