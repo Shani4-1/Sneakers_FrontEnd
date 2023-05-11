@@ -1,3 +1,32 @@
+nav {
+  background-color: black;
+  /* background-image: url() */
+  background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 2px 2px 4px grey;
+  margin-bottom: 1em;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+button a {
+  color: black;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
