@@ -106,10 +106,9 @@ function SneakerNewForm() {
             <br />
     
             <input type="submit" />
-            <button>Cancel</button>
         </form>
-        </div>
-    )
+      </div>
+    );
 }
 
 export default SneakerNewForm;

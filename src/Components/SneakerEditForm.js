@@ -10,10 +10,10 @@ function SneakerEditForm() {
 
     const [sneaker, setSneaker] = useState({
         name: "",
-        url: "",
         brand: "",
         release_date: "",
-        price: 0,  
+        price: 0,
+        rating: 0,  
         is_favorite: false,
     });
 
@@ -62,17 +62,6 @@ return (
           required
         />
 
-        <label htmlFor="url">URL:</label>
-        <input
-          id="url"
-          type="text"
-          pattern="http[s]*://.+"
-          required
-          value={sneaker.url}
-          placeholder="http://"
-          onChange={handleTextChange}
-        />
-
         <label htmlFor="brand">Brand:</label>
         <input
           id="brand"
@@ -99,6 +88,17 @@ return (
           type="number"
           name="price"
           value={sneaker.price}
+          placeholder="0"
+          onChange={handleTextChange}
+        />
+
+        <label htmlFor="rating">Rating:</label>
+        <input
+          id="rating"
+          type="number"
+          name="rating"
+          required
+          value={sneaker.rating}
           placeholder="0"
           onChange={handleTextChange}
         />
