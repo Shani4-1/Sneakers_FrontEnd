@@ -49,7 +49,7 @@ const SneakerDetails = () => {
       <img src={sneaker.image_url} alt={sneaker.name} />
       <h5>
         <span>
-          <a href={sneaker.purchase_url}>Purchase Here</a>
+          <a href={sneaker.purchase_url}>{sneaker.name}</a>
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {sneaker.purchase_url}
       </h5>
