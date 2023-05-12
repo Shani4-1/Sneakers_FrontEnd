@@ -1,5 +1,20 @@
 # Getting Started with Create React App
 
+## Group Members: Marangely Rosas & Shaniqua Coston
+
+## This is our Trello Board URL address:
+To see our Trello Board [Click Here](https://trello.com/b/Z1cHui2n/sneaker-app)
+
+## This is our Back-end GitHub repository URL address:
+To access our Back-end GitHub Repo [Click Here](https://github.com/MarangelyRosas/Sneakers_Backend)
+
+## This is our Back-end Render Deployment URL address:
+To see our Back-end Deployment on Render [Click Here](https://sneakers-backend.onrender.com)
+
+## This is our Front-end Netlify Deployment URL address:
+To see our Front-end Netlify Deployment [Click Here]()
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
