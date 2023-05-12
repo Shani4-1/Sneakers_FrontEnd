@@ -12,10 +12,10 @@ To access our Back-end GitHub Repo [Click Here](https://github.com/MarangelyRosa
 To see our Back-end Deployment on Render [Click Here](https://sneakers-backend.onrender.com)
 
 ## This is our Front-end Netlify Deployment URL address:
-To see our Front-end Netlify Deployment [Click Here]()
+To see our Front-end Netlify Deployment [Click Here](https://main--jade-mandazi-2e6b1f.netlify.app/)
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
