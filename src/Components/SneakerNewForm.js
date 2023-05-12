@@ -21,10 +21,10 @@ function SneakerNewForm() {
 
     const [sneaker, setSneaker] = useState({
         name: "",
-        url: "",
         brand: "",
         release_date: "",
-        price: 0,  
+        price: 0,
+        rating: 0,  
         is_favorite: false,
     });
 
@@ -52,17 +52,6 @@ function SneakerNewForm() {
               onChange={handleTextChange}
               placeholder="Name of Sneaker"
               required
-            />
-    
-            <label htmlFor="url">URL:</label>
-            <input
-              id="url"
-              type="text"
-              pattern="http[s]*://.+"
-              required
-              value={sneaker.url}
-              placeholder="http://"
-              onChange={handleTextChange}
             />
     
             <label htmlFor="brand">Brand:</label>
@@ -94,6 +83,17 @@ function SneakerNewForm() {
               placeholder="0"
               onChange={handleTextChange}
             />
+
+            <label htmlFor="rating">Rating:</label>
+            <input
+              id="rating"
+              type="number"
+              name="rating"
+              required
+              value={sneaker.rating}
+              placeholder="0"
+              onChange={handleTextChange}
+            />
     
             <label htmlFor="is_favorite">Favorite:</label>
             <input
@@ -106,10 +106,9 @@ function SneakerNewForm() {
             <br />
     
             <input type="submit" />
-            <button>Cancel</button>
         </form>
-        </div>
-    )
+      </div>
+    );
 }
 
 export default SneakerNewForm;
