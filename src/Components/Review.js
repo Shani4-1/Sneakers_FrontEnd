@@ -1,7 +1,7 @@
+import ReviewsForm from "./ReviewsForm";
 import { useState } from "react";
-import ReviewsForm from "./ReviewsForm.js";
 
-const Review = ({ review, handleDelete, handleSubmit }) => {
+function Review({ review, handleDelete, handleSubmit }) {
   const [viewEditForm, toggleEditForm] = useState(false);
 
   const toggleView = () => {
@@ -26,16 +26,9 @@ const Review = ({ review, handleDelete, handleSubmit }) => {
           <p>{review.content}</p>
         </div>
       )}
-      <div>
-        <h4>
-          {review.title} <spa>{review.rating}</spa>
-        </h4>
-        <h5>{review.reviewer}</h5>
-        <p>{review.content}</p>
-      </div>
-      <button onClick={handleDelete(review.id)}>Delete</button>
+      <button onClick={() => handleDelete(review.id)}>Delete</button>
     </div>
   );
-};
+}
 
 export default Review;

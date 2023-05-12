@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const ReviewsForm = (props) => {
+function ReviewsForm(props) {
   let { id } = useParams();
   const { reviewDetails } = props;
 
@@ -12,8 +12,9 @@ const ReviewsForm = (props) => {
     rating: "",
     sneaker_id: id,
   });
+
   const handleTextChange = (event) => {
-    setReview({ ...review, [event.target.id]: event.target.id });
+    setReview({ ...review, [event.target.id]: event.target.value });
   };
 
   useEffect(() => {
@@ -26,7 +27,8 @@ const ReviewsForm = (props) => {
     event.preventDefault();
     props.handleSubmit(review, id);
     if (reviewDetails) {
-      props.toggleView();
+      console.log("review id", reviewDetails.id);
+      props.toggleView(); // specifies whether we are editing or creating
     }
     setReview({
       reviewer: "",
@@ -36,8 +38,11 @@ const ReviewsForm = (props) => {
       sneaker_id: id,
     });
   };
+  
   return (
     <div className="Edit">
+          {/* renders the children elements of this component */}
+          {/* <ReviewForm> some child element </ReviewForm> */}
         {props.children}
         <form onSubmit={handleSubmit}>
          <label htmlFor="reviewer">Name:</label>
@@ -49,6 +54,7 @@ const ReviewsForm = (props) => {
           placeholder="Your name"
           required
          /> 
+
          <label htmlFor="title">Title:</label> 
          <input
           id="title"
@@ -57,6 +63,7 @@ const ReviewsForm = (props) => {
           value={review.title}
           onChange={handleTextChange}
          /> 
+
          <label htmlFor="rating">Rating</label>
          <input
           id="rating"
@@ -68,6 +75,7 @@ const ReviewsForm = (props) => {
           value={review.rating}
           onChange={handleTextChange}
          />
+
          <label htmlFor="content">Review</label>
          <textarea
           id="content"
@@ -77,6 +85,8 @@ const ReviewsForm = (props) => {
           placeholder="What do you think about these sneakers?"
           onChange={handleTextChange}
          />
+
+         
          <br />
 
          <input type="submit" />
