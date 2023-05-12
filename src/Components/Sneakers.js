@@ -30,8 +30,8 @@ const Sneakers = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Purchase Here</th>
-              <th>View Sneaker Details</th>
+              <th>Sneaker Name</th>
+              <th>View Details</th>
             </tr>
           </thead>
           <tbody>
