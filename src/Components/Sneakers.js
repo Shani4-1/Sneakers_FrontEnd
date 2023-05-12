@@ -1,11 +1,11 @@
-//DEPENDENCIES
+// DEPENDENCIES
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-//FILE IMPORTS
+// FILE IMPORTS
 import Sneaker from "./Sneaker.js";
 
-//API
+// API
 const API = process.env.REACT_APP_API_URL;
 
 const Sneakers = () => {
@@ -18,21 +18,28 @@ const Sneakers = () => {
         setSneakers(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.warn("catch", error);
       });
   }, []);
 
   return (
     <div className="Sneakers">
-      <section className="Heading">
-        <h1>All Sneakers</h1>
-      </section>
-      <section className="Sneakers-List">
-        <ul>
-          {sneakers.map((sneaker) => {
-            return <Sneaker key={sneaker.id} sneaker={sneaker} />;
-          })}
-        </ul>
+      <h1>All Sneakers</h1>
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Purchase Here</th>
+              <th>View Sneaker Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sneakers.map((sneaker) => {
+              return <Sneaker key={sneaker.id} sneaker={sneaker} />;
+            })}
+          </tbody>
+        </table>    
       </section>
     </div>
   );
