@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import Reviews from "../Components/Reviews.js";
+import Reviews from "./Reviews.js";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -21,10 +21,12 @@ const SneakerDetails = () => {
       })
       .catch((error) => {
         console.log(error);
-        console.warn("catch", error);
+        console.warn("catch:", error);
       });
   }, [id]);
+
   const handleDelete = () => {
+    console.log("I clicked delete");
     deleteSneaker();
   };
 
@@ -35,7 +37,7 @@ const SneakerDetails = () => {
         navigate(`/sneakers`);
       })
       .catch((error) => {
-        console.log(error);
+        console.warn("catch:", error);
       });
   };
 
