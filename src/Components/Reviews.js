@@ -21,8 +21,10 @@ const Reviews = () => {
       .post(`${API}/sneakers/${id}/reviews`, newReview)
       .then((response) => {
         setReviews([response.data, ...reviews]);
-      })
-      .catch((error) => console.log(error));
+      },
+      (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c));
   };
 
   const handleDelete = (reviewId) => {
@@ -35,8 +37,10 @@ const Reviews = () => {
         });
         copyReviewArray.splice(indexDeletedReview, 1);
         setReviews(copyReviewArray);
-      })
-      .catch((error) => console.log(error));
+      },
+      (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c));
   };
 
   const handleEdit = (updatedReview) => {
@@ -50,7 +54,7 @@ const Reviews = () => {
         copyReviewArray[indexUpdatedReview] = response.data;
         setReviews(copyReviewArray);
       })
-      .catch((error) => console.log(error));
+      .catch((c) => console.warn("catch", c));
   };
 
   return (

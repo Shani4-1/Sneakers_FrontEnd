@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav>
       <h1>
-        <Link to={`/`}>👟Sneaker App👟</Link>
+        <Link to={`/`}>👟 Sneaker App 👟</Link>
       </h1>
       <button>
         <Link to={`/sneakers`}>All Sneakers</Link>
