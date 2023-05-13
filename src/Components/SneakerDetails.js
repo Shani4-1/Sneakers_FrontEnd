@@ -18,7 +18,6 @@ const SneakerDetails = () => {
       .then((response) => {
         console.log(response.data);
         setSneaker(response.data[0]);
-
       })
       .catch((error) => {
         console.log(error);
@@ -43,36 +42,46 @@ const SneakerDetails = () => {
   };
 
   return (
-    <article>
-      <h3>
-        {sneaker?.is_favorite ? <span>⭐️</span> : null} {sneaker?.name}
-      </h3>
-      <img src={sneaker?.image_url} alt={sneaker?.name} />
-      <h5>
-        <span>
-          <a href={sneaker?.purchase_url}>{sneaker?.name}</a>
-        </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {sneaker?.purchase_url}
-      </h5>
-      <h6>{sneaker?.brand}</h6>
-      <h6>
-        Released: {sneaker?.release_date} Original Price: ${sneaker?.price}.00
-      </h6>
-      <div className="showNavigation">
-        <div>
-          <Link to={`/sneakers`}>
-            <button>Back</button>
-          </Link>
-        </div>
-        <div>
-          <Link to={`/sneakers/id/edit`}>
-            <button>Edit</button>
-          </Link>
-        </div>
-        <div>
-          <button onClick={handleDelete}>Delete</button>
+    <article className="sneaker-details">
+      <img
+        src={sneaker.image_url}
+        alt={sneaker.name}
+        className="sneaker-details__image"
+      />
+      <div className="sneaker-details__details">
+        <h2 className="sneaker-details__name">
+          {sneaker.is_favorite && <span>⭐️</span>} {sneaker.name}
+        </h2>
+        <h5 className="sneaker-details__purchase">
+          <span>
+            <a href={sneaker.purchase_url}>Purchase Here!</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </h5>
+        <h6 className="sneaker-details__brand">{sneaker.brand}</h6>
+        <h6 className="sneaker-details__release">
+          ~ Released: {sneaker.release_date} ~👟~ Original Price: $
+          {sneaker.price}.00 ~
+        </h6>
+      </div>
+      <div className="sneaker-details__navigation">
+        <div className="button-container">
+          <div>
+            <Link to="/sneakers">
+              <button>Back</button>
+            </Link>
+          </div>
+          <div>
+            <Link to={`/sneakers/${id}/edit`}>
+              <button>Edit</button>
+            </Link>
+          </div>
+          <div>
+            <button onClick={handleDelete}>Delete</button>
+          </div>
         </div>
       </div>
+      <br></br>
       <Reviews />
     </article>
   );

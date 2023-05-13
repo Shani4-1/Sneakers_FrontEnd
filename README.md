@@ -1,18 +1,33 @@
-# Getting Started with Create React App
+# Sneaker App
 
-## Group Members: Marangely Rosas & Shaniqua Coston
+This is a web application built with PERN (PostgreSQL, Express, React, Node.js) and REST API that allows users to add their favorite sneakers to a list.
 
-## This is our Trello Board URL address:
-To see our Trello Board [Click Here](https://trello.com/b/Z1cHui2n/sneaker-app)
+## Group Members
 
-## This is our Back-end GitHub repository URL address:
-To access our Back-end GitHub Repo [Click Here](https://github.com/MarangelyRosas/Sneakers_Backend)
+- Marangely Rosas
+- Shaniqua Coston
 
-## This is our Back-end Render Deployment URL address:
-To see our Back-end Deployment on Render [Click Here](https://sneakers-backend.onrender.com)
+## Trello Board
 
-## This is our Front-end Netlify Deployment URL address:
-To see our Front-end Netlify Deployment [Click Here](https://main--jade-mandazi-2e6b1f.netlify.app/)
+To see our Trello Board, [click here](https://trello.com/b/Z1cHui2n/sneaker-app).
+
+## Back-end
+
+- GitHub Repository URL: https://github.com/MarangelyRosas/Sneakers_Backend
+- Render Deployment URL: https://sneakers-backend.onrender.com
+
+## Front-end
+
+- Netlify Deployment URL: https://main--jade-mandazi-2e6b1f.netlify.app/
+
+## Installation
+
+To run this app on your local machine, clone the repository and run the following commands:
+
+```bash
+npm install
+npm install axios react-router-dom
+```
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
