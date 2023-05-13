@@ -18,7 +18,7 @@ const Sneakers = () => {
         setSneakers(response.data);
       })
       .catch((error) => {
-        console.warn("catch", error);
+        console.log(error);
       });
   }, []);
 

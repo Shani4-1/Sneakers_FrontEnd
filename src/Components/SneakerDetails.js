@@ -7,7 +7,7 @@ import Reviews from "./Reviews.js";
 const API = process.env.REACT_APP_API_URL;
 
 const SneakerDetails = () => {
-  const [sneaker, setSneaker] = useState([]);
+  const [sneaker, setSneaker] = useState({});
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -17,7 +17,8 @@ const SneakerDetails = () => {
       .get(`${API}/sneakers/${id}`)
       .then((response) => {
         console.log(response.data);
-        setSneaker(response.data);
+        setSneaker(response.data[0]);
+
       })
       .catch((error) => {
         console.log(error);
@@ -44,17 +45,19 @@ const SneakerDetails = () => {
   return (
     <article>
       <h3>
-        {sneaker.is_favorite ? <span>⭐️</span> : null} {sneaker.name}
+        {sneaker?.is_favorite ? <span>⭐️</span> : null} {sneaker?.name}
       </h3>
-      <img src={sneaker.image_url} alt={sneaker.name} />
+      <img src={sneaker?.image_url} alt={sneaker?.name} />
       <h5>
         <span>
-          <a href={sneaker.purchase_url}>{sneaker.name}</a>
+          <a href={sneaker?.purchase_url}>{sneaker?.name}</a>
         </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {sneaker.purchase_url}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {sneaker?.purchase_url}
       </h5>
-      <h6>{sneaker.brand}</h6>
-      <h6>{sneaker.release_date}</h6>
+      <h6>{sneaker?.brand}</h6>
+      <h6>
+        Released: {sneaker?.release_date} Original Price: ${sneaker?.price}.00
+      </h6>
       <div className="showNavigation">
         <div>
           <Link to={`/sneakers`}>

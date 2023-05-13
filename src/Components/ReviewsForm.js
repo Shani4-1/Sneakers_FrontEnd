@@ -14,8 +14,10 @@ function ReviewsForm(props) {
   });
 
   const handleTextChange = (event) => {
-    setReview({ ...review, [event.target.id]: event.target.value });
+    const { id, value } = event.target;
+    setReview(prevState => ({ ...prevState, [id]: value }));
   };
+  
 
   useEffect(() => {
     if (reviewDetails) {
