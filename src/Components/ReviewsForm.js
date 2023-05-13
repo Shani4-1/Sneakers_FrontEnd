@@ -66,7 +66,7 @@ function ReviewsForm(props) {
           onChange={handleTextChange}
          /> 
 
-         <label htmlFor="rating">Rating</label>
+         <label htmlFor="rating">Rating:</label>
          <input
           id="rating"
           type="number"
@@ -78,7 +78,7 @@ function ReviewsForm(props) {
           onChange={handleTextChange}
          />
 
-         <label htmlFor="content">Review</label>
+         <label htmlFor="content">Review:</label>
          <textarea
           id="content"
           type="text"
