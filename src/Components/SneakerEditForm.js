@@ -10,9 +10,11 @@ function SneakerEditForm() {
 
     const [sneaker, setSneaker] = useState({
         name: "",
+        image_url: "",
         brand: "",
         release_date: "",
         price: 0,
+        purchase_url: "",
         rating: 0,  
         is_favorite: false,
     });
