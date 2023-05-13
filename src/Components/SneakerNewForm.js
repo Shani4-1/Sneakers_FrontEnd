@@ -40,7 +40,7 @@ function SneakerNewForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addSneaker(addSneaker);
+    addSneaker(sneaker);
   };
 
   return (
@@ -93,13 +93,13 @@ function SneakerNewForm() {
           placeholder="0"
           onChange={handleTextChange}
         />
-        <label htmlFor="purchase_url">Where can we buy them?:</label>
+        <label htmlFor="purchase_url">Can We Buy Them?? Drop The Link!</label>
         <input
           id="purchase_url"
-          type="number"
+          type="text"
           name="purchase_url"
-          value={sneaker.price}
-          placeholder="0"
+          value={sneaker.purchase_url}
+          placeholder="https://Ebay.com"
           onChange={handleTextChange}
         />
 
