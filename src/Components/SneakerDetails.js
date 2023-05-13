@@ -60,8 +60,8 @@ const SneakerDetails = () => {
         </h5>
         <h6 className="sneaker-details__brand">{sneaker.brand}</h6>
         <h6 className="sneaker-details__release">
-          ~ Released: {sneaker.release_date} ~👟~ Original Price: $
-          {sneaker.price}.00 ~
+           Released: {sneaker.release_date} 👟 Original Price: $
+          {sneaker.price}.00 
         </h6>
       </div>
       <div className="sneaker-details__navigation">

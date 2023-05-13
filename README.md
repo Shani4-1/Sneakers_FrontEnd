@@ -9,16 +9,16 @@ This is a web application built with PERN (PostgreSQL, Express, React, Node.js) 
 
 ## Trello Board
 
-To see our Trello Board, [click here](https://trello.com/b/Z1cHui2n/sneaker-app).
+To see our Trello Board, [Click Here](https://trello.com/b/Z1cHui2n/sneaker-app).
 
 ## Back-end
 
-- GitHub Repository URL: https://github.com/MarangelyRosas/Sneakers_Backend
-- Render Deployment URL: https://sneakers-backend.onrender.com
+- GitHub Repository URL: [Click Here](https://github.com/MarangelyRosas/Sneakers_Backend)
+- Render Deployment URL: [Click Here](https://sneakers-backend.onrender.com)
 
 ## Front-end
 
-- Netlify Deployment URL: https://main--jade-mandazi-2e6b1f.netlify.app/
+- Netlify Deployment URL: [Click Here](https://main--jade-mandazi-2e6b1f.netlify.app/)
 
 ## Installation
 
