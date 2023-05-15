@@ -25,7 +25,6 @@ function SneakerNewForm() {
     brand: "",
     release_date: "",
     price: 0,
-    purchase_url: "",
     rating: 0,
     is_favorite: false,
   });
@@ -93,7 +92,7 @@ function SneakerNewForm() {
           placeholder="0"
           onChange={handleTextChange}
         />
-        <label htmlFor="purchase_url">Can We Buy Them?? Drop The Link!</label>
+        {/* <label htmlFor="purchase_url">Can We Buy Them?? Drop The Link!</label>
         <input
           id="purchase_url"
           type="text"
@@ -101,7 +100,7 @@ function SneakerNewForm() {
           value={sneaker.purchase_url}
           placeholder="https://Ebay.com"
           onChange={handleTextChange}
-        />
+        /> */}
 
         <label htmlFor="rating">Rating:</label>
         <input
